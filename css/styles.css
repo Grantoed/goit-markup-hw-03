@@ -3,7 +3,9 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --primary-bg-color: #ffffff;
-  --secondary-bg-color: #2f303a;
+  --secondary-bg-color: #f5f4fa;
+  --hero-bg-color: #2f303a;
+  --footer-bg-color: #2f303a;
   --primary-button-color: #f5f4fa;
   --logo-web-primary: #2196f3;
   --logo-studio-primary: #000000;
@@ -23,16 +25,38 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
 ul {
+  margin: 0px;
+  padding: 0px;
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Шапка */
 .logo {
+  display: inline-block;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+}
+
+.header .logo {
+  margin: 24px 0 25px 0;
 }
 
 .logo-web {
@@ -50,6 +74,10 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.site-nav > li {
+  padding: 32px 0;
+}
+
 .site-nav .link {
   color: var(--title-text-color);
 }
@@ -59,6 +87,9 @@ ul {
   color: var(--accent-color);
 }
 
+.auth-nav > li {
+  padding: 32px 0;
+}
 .auth-nav .link {
   color: var(--primary-text-color);
 }
@@ -70,11 +101,17 @@ ul {
 
 /* Баннер */
 .hero {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--hero-bg-color);
   color: var(--primary-bg-color);
+  text-align: center;
+}
+
+.hero .container {
+  padding: 200px 0;
 }
 
 .hero-title {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -84,6 +121,8 @@ ul {
 
 .hero-button {
   font-family: inherit;
+  width: 200px;
+  height: 50px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -91,12 +130,19 @@ ul {
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
 }
 
 /* Особенности */
+.section-title.hidden {
+  display: none;
+}
 .feature-list .title {
   font-weight: 700;
   line-height: 1.14;
+  padding: 94px 0 10px 0;
   text-transform: uppercase;
   color: var(--title-text-color);
 }
@@ -106,26 +152,42 @@ ul {
 }
 
 /* Чем мы занимаемся */
+.section.examples {
+  margin-bottom: 94px;
+}
 .section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
+  text-align: center;
+  padding: 94px 0 50px 0;
   color: var(--title-text-color);
 }
 
 /* Наша команда */
+.section.team {
+  background-color: var(--secondary-bg-color);
+}
 .staff-list .name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 10px;
   color: var(--title-text-color);
 }
 
 /* Подвал */
 .footer {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--footer-bg-color);
 }
 
+.footer .container {
+  padding: 60px 0;
+}
+
+.footer .logo {
+  margin-bottom: 20px;
+}
 .footer .logo-web {
   color: var(--logo-web-secondary);
 }
@@ -134,8 +196,9 @@ ul {
   color: var(--logo-studio-secondary);
 }
 
-.footer-nav {
+.footer-nav > li {
   line-height: 1.71;
+  padding-bottom: 9px;
 }
 .footer-address {
   font-style: normal;
@@ -153,28 +216,33 @@ ul {
 }
 
 /* PORTFOLIO.HTML */
-.hidden {
-  visibility: hidden;
-}
-
 .button {
+  display: inline-block;
+  min-width: 73px;
+  padding: 6px 22px;
+  margin: 94px 0 50px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   color: var(--title-text-color);
   cursor: pointer;
+  border: transparent;
+  border-radius: 4px;
 }
 
 .button:hover,
 .button:focus {
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-examples .title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
+  padding: 20px 0 4px 0;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
 }
@@ -183,4 +251,10 @@ ul {
   font-size: 16px;
   line-height: 1.88;
   color: var(--primary-text-color);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 215px;
+  outline: 2px solid tomato;
 }
