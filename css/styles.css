@@ -51,13 +51,13 @@ h6 {
 .container {
   width: 1200px;
   margin: 0 215px;
-  outline: 2px solid tomato;
 }
 
-/* Шапка */
+/* Header */
 .main-nav {
   display: flex;
 
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -68,7 +68,6 @@ h6 {
 }
 
 .logo {
-  margin-left: 20px;
   margin-right: 93px;
 
   font-family: "Raleway", sans-serif;
@@ -118,8 +117,6 @@ h6 {
 .auth-nav {
   display: flex;
 
-  margin-left: 331px;
-
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -137,7 +134,7 @@ h6 {
   color: var(--accent-color);
 }
 
-/* Баннер */
+/* Hero */
 .hero {
   text-align: center;
 
@@ -182,7 +179,7 @@ h6 {
   cursor: pointer;
 }
 
-/* Особенности */
+/* Specialities */
 .section .container {
   padding: 94px 0;
 }
@@ -213,7 +210,7 @@ h6 {
   line-height: 1.71;
 }
 
-/* Чем мы занимаемся */
+/* Profile */
 .section-title {
   color: var(--title-text-color);
 
@@ -224,9 +221,21 @@ h6 {
   text-align: center;
 }
 
-/* Наша команда */
+.profile-list {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+/* Our staff */
 .section.team {
   background-color: var(--secondary-bg-color);
+}
+
+.staff-list {
+  display: flex;
+
+  justify-content: space-between;
 }
 .staff-list .name {
   font-weight: 500;
@@ -236,7 +245,7 @@ h6 {
   color: var(--title-text-color);
 }
 
-/* Подвал */
+/* Footer */
 .footer {
   background-color: var(--footer-bg-color);
 }
@@ -246,6 +255,8 @@ h6 {
 }
 
 .footer .logo {
+  display: inline-block;
+  margin-right: 0;
   margin-bottom: 20px;
 }
 .footer .logo-web {
@@ -279,6 +290,15 @@ h6 {
 }
 
 /* PORTFOLIO.HTML */
+.filter {
+  display: flex;
+  justify-content: center;
+}
+
+.filter .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .button {
   display: inline-block;
 
@@ -307,7 +327,12 @@ h6 {
 }
 
 .portfolio-examples {
-  display: inline-block;
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-bottom: 94px;
 }
 
 .portfolio-examples .title {
