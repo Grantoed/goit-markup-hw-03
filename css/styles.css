@@ -11,6 +11,7 @@
   --logo-studio-primary: #000000;
   --logo-web-secondary: #2196f3;
   --logo-studio-secondary: #ffffff;
+  --primary-border-color: #ececec;
 }
 
 body {
@@ -52,17 +53,16 @@ h6 {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 215px;
+  margin: 0 auto;
 }
 
 /* Header */
 .header {
-  border-bottom: 2px solid #ececec;
+  border-bottom: 1px solid var(--primary-border-color);
 }
 .main-nav {
   display: flex;
 
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -121,6 +121,8 @@ h6 {
 
 .auth-nav {
   display: flex;
+
+  margin-left: auto;
 
   font-weight: 500;
   line-height: 1.14;
@@ -207,6 +209,7 @@ h6 {
 
   color: var(--title-text-color);
 
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -262,6 +265,13 @@ h6 {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
+.staff-list img {
+  display: block;
+
+  max-width: 100%;
+  max-height: auto;
+}
 .staff-list .name {
   color: var(--title-text-color);
 
@@ -282,15 +292,14 @@ h6 {
 /* Footer */
 .footer {
   background-color: var(--footer-bg-color);
-}
 
-.footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .footer .logo {
   display: inline-block;
+
   margin-right: 0;
   margin-bottom: 20px;
 }
@@ -303,10 +312,13 @@ h6 {
 }
 
 .footer-nav > li {
-  margin-bottom: 9px;
-
   line-height: 1.71;
 }
+
+.footer-nav li:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer-address {
   color: var(--primary-bg-color);
 
@@ -385,12 +397,16 @@ h6 {
   margin-bottom: 0px;
 }
 .portfolio-examples .description {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
 .portfolio-examples .title {
-  padding: 20px 0 4px 0;
+  margin-bottom: 4px;
 
   color: var(--title-text-color);
 
